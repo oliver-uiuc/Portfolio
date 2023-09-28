@@ -1,13 +1,393 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>MP1</title>
-    </head>
-    <body>
-        <h1>Hello World! Welcome to MP1!</h1>
-        <img src="assets/image.jpg">
-    </body>
+
+<head>
+    <!-- Include necessary meta tags, stylesheets, and scripts -->
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.scss">
+    <title>Mp1-Portfolio</title>
+    <script src="https://kit.fontawesome.com/32088cc966.js" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+
+    <!-- <h1>Hello World! Welcome to MP1!</h1>
+    <img src="assets/image.jpg"> -->
+    <nav class="navbar">
+        <img src="assets/logo.jpg" class="logo">
+        <ul>
+            <li><a href="#banner">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#service">Service</a></li>
+            <li><a href="#honor">Honors</a></li>
+            <li><a href="#picture">Misc</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fa-solid fa-bars"></i>
+        </ul>
+    </nav>
+    <div id="banner">
+        <!-- <img src="assets/background.jpg"> -->
+
+        <div class="content">
+            <h1>Hola/hi</h1>
+            <p>My name is Xinyue Oliver HU. <br> I am a first-year Master of Computer Science Student at UIUC. <br> I am
+                actively looking for 2024 summer internships.</p>
+            <div>
+                <button type="button"><span></span><a href="#about">Explore</a></button>
+                <!-- <button type="button"><span></span>SUBSCRIBE</button> -->
+            </div>
+        </div>
+    </div>
+
+    <div id="about">
+
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="assets/About1.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About</h1>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('interest')">Interest</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="interest">
+                        <ul>
+                            <li>His interest spans Machine Learning, Data Mining, Software Engineering and Database
+                                Systems. </li>
+                            <li>He is particularly interested in the Large Language Model based projects.</li>
+                        </ul>
+                    </div>
+
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="education">
+                        <ul>
+                            <li>[Aug 2023 - May 2025] University of Illinois Urbana-Champaign, Master of Computer
+                                Science</li>
+                            <li>[Aug 2019 - May 2023] Hong Kong Baptist University, Bachelor of Science in Computer
+                                Science (Hons);
+                                Minor in Applied Math; Major GPA: 3.90/4.00</li>
+                            <li>[Aug 2021 - Dec 2021] McGill University, Visiting Student at School of Computer Science
+                            </li>
+                            <li>[Jan 2023 - May 2023] Nanyang Technological University, Exchange Student at School of
+                                Computer Science and Engineering</li>
+                        </ul>
+                    </div>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('experience')">Experience</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="experience">
+                        <ul>
+                            <li>[Jun 2022 - Aug 2022] Research Internship at Trustworthy Machine Learning and Reasoning
+                                Group</li>
+                            <li>[Jun 2020 - Aug 2020] Research Internship at Institute of Computational and Theoretical
+                                Studies</li>
+                        </ul>
+                    </div>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li>Languages: Java, Python, SQL, OCaml, JavaScript, HTML/CSS, MATLAB, C/C++, LATEX</li>
+
+                            <li>Tools and frameworks: Git, Unix Shell, VS Code, IntelliJ IDEA, Eclipse, Pytorch,
+                                Threejs, AWS, Hadoop, Figma</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="projects">
+        <div class="container">
+            <h1 class="sub-title">Development Projects</h1>
+            <div class="projects-list">
+                <div>
+                    <h2>MiniCAML: a DIY Programming Language</h2>
+                    <p>Implemented a programming language called MiniCAML in OCaml to achieve available
+                        functionalities such as free variables, substitution, evaluation, type checking,
+                        and type inference. MiniCAML has been extended to n-ary function abstraction, application, and
+                        recursion.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <h2>Interactive 3D Open World Games</h2>
+                    <p>A game where a helicopter can fly in the 3D space freely. Used the Perlin noise to randomly
+                        create the topography
+                        (infinite & never repeat), including trees, mountains, rivers, and cloud. Used Gerstner wave
+                        function
+                        to simulate water fluctuations. Energy decreased with flight time, and the aviator needed to
+                        search for randomly
+                        generated energy balls to keep the helicopter flying.</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="projects2">
+            <div class="container">
+                <h1 class="sub-title">Research Projects</h1>
+                <div class="projects-list">
+                    <div>
+                        <h2>Self-Supervised Learning</h2>
+                        <p> Focused on aligning gradients between different domains.
+                            The work revealed that gradient variance matching was particularly effective, outperforming
+                            a widely used method Inter-domain Gradient Matching by 5% in accuracy on the DomainBed dataset.
+                        </p>
+                        <a href="#">Learn more</a>
+                    </div>
+                    <div>
+                        <h2>Trustworthy Machine Learning</h2>
+                        <p>Aimed at addressing challenges of class imbalance, label noise, and data scarcity.
+                            To tackle these issues, a method that adjusts training difficulty was introduced.
+                            It involved adding perturbations to model parameters before updating them.</p>
+                        <a href="#">Learn more</a>
+                    </div>
+                    <div>
+                        <h2>COVID-19 Transmission Modelling</h2>
+                        <p>
+                            Built a mathematical model focusing on symptom onset, which is calibrated using data from severe outbreaks.
+                            Analyzed the impact of different disease control policies in various areas, observing the
+                            reduction of basic reproduction number R0.</p>
+                        <a href="#">Learn more</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="service">
+                <div class="container">
+                    <h1 class="sub-title">Services</h1>
+                    <div class="service-list">
+                        <ul>
+                            <li>
+                                Peer Tutor, Department of Computer Science, Faculty of Science, Hong Kong Baptist
+                                University, 2022-2023
+                            </li>
+                            <li>
+                                Teaching Assistant, COMP1005 Essence of Computing, Hong Kong Baptist University, Spring
+                                2022
+                            </li>
+                            <li>
+                                Teaching Assistant, COMP2026 Problem Solving Using Objects Oriented Programming, Hong
+                                Kong Baptist University, Fall 2022
+                            </li>
+                            <li>
+                                External Secretary, Student Union Mountaineering Association, Hong Kong Baptist
+                                University, 2020-2021
+                            </li>
+                            <li>
+                                Vice-Caption, Mainland Football Club, Hong Kong Baptist University, 2020-2022
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="honor">
+                <div class="container">
+                    <h1 class="sub-title">Scholarships and Awards</h1>
+                    <div class="service-list">
+                        <ul>
+                            <li>
+                                Second Prize of Math Competition, Hebei, China [2018]
+                            </li>
+                            <li>
+                                President’s Honor Roll and Dean’s List, Hong Kong [2019-2022]
+                            </li>
+                            <li>
+                                C.V. Starr Scholarship Fund, Hong Kong [2021-2023]
+                            </li>
+                            <li>
+                                Sir Tseng Chi Lu Scholarship, Hong Kong [2021]
+                            </li>
+                            <li>
+                                Providence Foundation Bursary for Mainland Students, Hong Kong [2021]
+                            </li>
+                            <li>
+                                Outstanding Student Scholarship, Hong Kong [2021]
+                            </li>
+                            <li>
+                                Full Exchange Scholarship Nomination by Department and Faculty, Hong Kong [2021]
+                            </li>
+                            <li>
+                                Summer Undergraduate Research Fellowship, Hong Kong [2022]
+                            </li>
+                            <li>
+                                HKSAR Talent Development Scholarship, Hong Kong [2022]
+                            </li>
+                            <li>
+                                Albert and Mabel Chan Exchange Scholarship, Hong Kong [2022]
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="picture">
+                <h1 class="sub-title">Misc</h1>
+                <br>
+                <div class="carousel-container">
+                    <div class="carousel-slide">
+                        <img src="assets/slide1.jpg" alt="Slide 1">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/slide2.jpg" alt="Slide 2">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/slide3.jpg" alt="Slide 3">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/slide0.jpg" alt="Slide 0">
+                    </div>
+
+                </div>
+                <div style="text-align: center;">
+                    <button id="prev-button" class="carousel-button">Previous</button>
+                    <button id="next-button" class="carousel-button">Next</button>
+                    <!-- <button id="open-button" class="carousel-button">View Fullscreen</button> -->
+                    <p style="text-align:center"><br>I love city exploration. Those are some pictures I took in Chicago.</p>
+                </div>
+
+                <!-- <div id="imageModal" class="modal">
+                    <div class="modal-content">
+                      <span id="closeButton" class="close-button">&times;</span>
+                      <img src="assets/slide1.jpg" alt="Full-Screen Image" class="modal-image" id="fullScreenImage">
+                      <p>This is a description of the image.</p>
+                    </div>
+                  </div> -->
+
+            </div>
+
+            <div id="video">
+                <video controls width="640" height="360">
+                    <source src="assets/chicago.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <p style="text-align:center">This is a video I recorded at a great bar "The Signature Lounge at the 96th".
+            It located at 875 N Michigan Ave, Chicago.</p>
+
+            <div class="image-grid">
+                <div class="grid-row">
+                  <div class="grid-cell">
+                    <img src="assets/g1.jpg" alt="Image 1" id="image1" class="grid-image">
+                  </div>
+                  <div class="grid-cell">
+                    <img src="assets/g2.jpg" alt="Image 2" id="image2" class="grid-image">
+                  </div>
+                  <div class="grid-cell">
+                    <img src="assets/g3.jpg" alt="Image 3" id="image3" class="grid-image">
+                  </div>
+                  <div class="grid-cell">
+                    <img src="assets/g4.jpg" alt="Image 4" id="image4" class="grid-image">
+                  </div>
+                </div>
+                <div class="grid-row">
+                    <div class="grid-cell">
+                      <img src="assets/g5.jpg" alt="Image 5" id="image5" class="grid-image">
+                    </div>
+                    <div class="grid-cell">
+                      <img src="assets/g6.jpg" alt="Image 6" id="image6" class="grid-image">
+                    </div>
+                    <div class="grid-cell">
+                      <img src="assets/g7.jpg" alt="Image 7" id="image7" class="grid-image">
+                    </div>
+                    <div class="grid-cell">
+                      <img src="assets/g8.jpg" alt="Image 8" id="image8" class="grid-image">
+                    </div>
+                  </div>
+                  <div class="grid-row">
+                    <div class="grid-cell">
+                      <img src="assets/g9.jpg" alt="Image 9" id="image9" class="grid-image">
+                    </div>
+                    <div class="grid-cell">
+                      <img src="assets/g10.jpg" alt="Image 10" id="image10" class="grid-image">
+                    </div>
+                    <div class="grid-cell">
+                      <img src="assets/g11.jpg" alt="Image 11" id="image11" class="grid-image">
+                    </div>
+                    <div class="grid-cell">
+                      <img src="assets/g12.jpg" alt="Image 12" id="image12" class="grid-image">
+                    </div>
+                  </div>
+                  <div class="grid-row">
+                    <div class="grid-cell">
+                      <img src="assets/g13.jpg" alt="Image 13" id="image13" class="grid-image">
+                    </div>
+                    <div class="grid-cell">
+                      <img src="assets/g14.jpg" alt="Image 14" id="image14" class="grid-image">
+                    </div>
+                    <div class="grid-cell">
+                      <img src="assets/g15.jpg" alt="Image 15" id="image15" class="grid-image">
+                    </div>
+                    <div class="grid-cell">
+                      <img src="assets/g16.jpg" alt="Image 16" id="image16" class="grid-image">
+                    </div>
+                  </div>
+              </div>
+
+              <p style="text-align:center">I am a foodie and these are my favorites of the year. Click to enlarge.</p>
+              
+              <!-- The Modal -->
+              <div id="imageModal" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                  <!-- <span id="closeButton" class="close-button">&times;</span> -->
+                  <img src="assets/g1.jpg" alt="Full-Screen Image" id="fullScreenImage" class="modal-image">
+                  <p>This is a description of the image.</p>
+                </div>
+              </div>
+              
+
+            <div id="contact">
+                <div class="container">
+                    <div class="row">
+                        <div class="contact-left">
+                            <h1 class="sub-title">Contact Me</h1>
+                            <p><i class="fa-solid fa-envelope"></i> xinyue21@illinois.edu</p>
+                            <p><i class="fa-solid fa-phone"></i> +1 217-402-4329</p>
+                            <div class="social-icons">
+                                <a href="https://www.linkedin.com/in/oliver-xinyue/"><i
+                                        class="fa-brands fa-linkedin"></i></a>
+                                <a href="https://www.instagram.com/spiderman19c/"><i
+                                        class="fa-brands fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="contact-right">
+                            <form>
+                                <input type="text" name="Name" placeholder="Your Name" required>
+                                <input type="email" name="email" placeholder="Your Email" required>
+                                <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                                <button type="submit" class="btn btn2">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Main content sections -->
+            <section class="section">
+                <!-- Section content goes here -->
+            </section>
+
+            <!-- Other sections go here -->
+
+            <!-- Footer section -->
+            <footer>
+                <!-- Footer content goes here -->
+            </footer>
+
+</body>
+
 </html>
